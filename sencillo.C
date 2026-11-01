@@ -9,12 +9,8 @@ gROOT->Reset();
 ifstream inp;
 int dat=6;//cantidad de datos
 int vector[dat];
-int i=0;
 inp.open("datosSencillo.dat");
-while(!inp.eof()){
- i++;
- inp>>vector[i]; 
-}
+for(int i=0;i<dat && inp>>vector[i];i++){}
 inp.close();
 
 desviacion stdev;
